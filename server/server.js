@@ -1,13 +1,12 @@
-import express from 'express'
-import 'dotenv/config'
-import cors from 'cors'
-import http from 'http'
-import { connectDB } from './lib/db.js'
-import userRouter from './routes/userRoutes.js'
-import messageRouter from './routes/messageRoutes.js'
+import express from 'express';
+import 'dotenv/config';
+import cors from 'cors';
+import http from 'http';
+import { connectDB } from './lib/db.js';
+import userRouter from './routes/userRoutes.js';
+import messageRouter from './routes/messageRoutes.js';
 import { Server } from 'socket.io';
-import { Socket } from 'dgram'
-import { log } from 'console'
+
 //Create Express app and HTTP server
 const app=express()
 const server=http.createServer(app)
